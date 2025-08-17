@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Plants - Premium Plant Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h2 class="logo">Natural Plants</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="products">Products</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="#" class="nav-link" data-page="login">Login</a></li>
+                    <li><a href="#" class="nav-link cart-link" data-page="cart">
+                        Cart (<span id="cart-count">0</span>)
+                    </a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Trees Are The Lungs All Over The World</h1>
+                    <p class="hero-subtitle">Discover the perfect plants to transform your space into a green paradise. From air-purifying indoor plants to stunning outdoor varieties.</p>
+                    <button class="btn btn--primary btn--lg cta-button" data-page="products">Shop Now</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600" alt="Beautiful plants">
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 class="stat-number">2.5k+</h3>
+                        <p class="stat-label">Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">450+</h3>
+                        <p class="stat-label">Awesome Collection</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">200+</h3>
+                        <p class="stat-label">Sell Everyday</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Plants</h2>
+                <div class="products-grid" id="featured-products-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- The Best Place Section -->
+        <section class="best-place">
+            <div class="container">
+                <div class="best-place-content">
+                    <div class="text-content">
+                        <h2>The Best Place For Your Plants</h2>
+                        <p>Transform your living space with our carefully selected collection of plants. Each plant is chosen for its beauty, air-purifying qualities, and ease of care.</p>
+                        <button class="btn btn--primary cta-button" data-page="products">Browse Collection</button>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500" alt="Indoor plants">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trees Enhance Beauty Section -->
+        <section class="enhance-beauty">
+            <div class="container">
+                <h2 class="section-title">Trees Enhance The Beauty Around You</h2>
+                <p class="section-subtitle">Discover how the right plants can completely transform your environment</p>
+                <div class="beauty-grid">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Monstera plant">
+                    <img src="https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=400" alt="Snake plant">
+                    <img src="https://images.unsplash.com/photo-1508022810467-9e8d6142c68b?w=400" alt="Fiddle leaf fig">
+                </div>
+            </div>
+        </section>
+
+        <!-- Make Home Beautiful Section -->
+        <section class="home-beautiful">
+            <div class="container">
+                <div class="home-beautiful-content">
+                    <div class="large-image">
+                        <img src="https://images.unsplash.com/photo-1493689485253-6d2649da9029?w=600" alt="Large plant display">
+                    </div>
+                    <div class="text-content">
+                        <h2>Make Sure Your Home Is Beautiful</h2>
+                        <p>Create a stunning indoor garden that purifies your air and brings natural beauty to every corner of your home.</p>
+                        <button class="btn btn--primary cta-button" data-page="products">Start Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Lorem ipsum dolor sit amet. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."</p>
+                    <cite>- Russell Richards</cite>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Products Page -->
+    <div id="products" class="page">
+        <section class="products-page">
+            <div class="container">
+                <h1>Our Plant Collection</h1>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Plants</button>
+                    <button class="filter-btn" data-filter="Indoor">Indoor Plants</button>
+                    <button class="filter-btn" data-filter="Outdoor">Outdoor Plants</button>
+                    <button class="filter-btn" data-filter="Cacti">Cacti</button>
+                </div>
+                <div class="products-grid" id="all-products-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login" class="page">
+        <section class="login-page">
+            <div class="container">
+                <div class="login-form-container">
+                    <div class="login-form">
+                        <h1>Welcome Back</h1>
+                        <p>Sign in to your Natural Plants account</p>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+                        </form>
+                        <p class="signup-link">Don't have an account? <a href="#" class="link">Sign up here</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cart" class="page">
+        <section class="cart-page">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <div id="cart-items">
+                    <!-- Cart items will be loaded dynamically -->
+                </div>
+                <div id="cart-empty" class="cart-empty hidden">
+                    <h2>Your cart is empty</h2>
+                    <p>Start shopping to add items to your cart</p>
+                    <button class="btn btn--primary cta-button" data-page="products">Shop Now</button>
+                </div>
+                <div id="cart-summary" class="cart-summary hidden">
+                    <div class="total">
+                        <h3>Total: $<span id="cart-total">0.00</span></h3>
+                    </div>
+                    <button class="btn btn--primary btn--full-width" data-page="checkout">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Checkout Page -->
+    <div id="checkout" class="page">
+        <section class="checkout-page">
+            <div class="container">
+                <h1>Checkout</h1>
+                <div class="checkout-content">
+                    <div class="checkout-form">
+                        <h2>Billing Information</h2>
+                        <form id="checkoutForm">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Payment Method</label>
+                                <select class="form-control">
+                                    <option>Credit Card</option>
+                                    <option>PayPal</option>
+                                    <option>Bank Transfer</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Place Order</button>
+                        </form>
+                    </div>
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div id="checkout-items">
+                            <!-- Order items will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="about-page">
+            <div class="container">
+                <h1>About Natural Plants</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Natural Plants has been bringing the beauty of nature indoors for over a decade. We believe that every home and office deserves the life-enhancing benefits of plants.</p>
+                        <p>Our carefully curated collection features plants that are not only beautiful but also easy to care for, making it simple for anyone to create their own green oasis.</p>
+                        
+                        <h2>Our Mission</h2>
+                        <p>To make premium plants accessible to everyone while providing expert guidance on plant care and maintenance.</p>
+                        
+                        <h2>Why Choose Us?</h2>
+                        <ul>
+                            <li>Premium quality plants sourced from trusted growers</li>
+                            <li>Expert care instructions with every purchase</li>
+                            <li>Fast, secure shipping with plant-safe packaging</li>
+                            <li>30-day satisfaction guarantee</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500" alt="Plant nursery">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="contact-page">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-item">
+                            <h3>Address</h3>
+                            <p>123 Garden Street<br>Green City, GC 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Phone</h3>
+                            <p>(555) 123-PLANT</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>info@naturalplants.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Natural Plants</h3>
+                    <p>Bringing nature into your home, one plant at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="products">Products</a></li>
+                        <li><a href="#" data-page="about">About</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Indoor Plants</a></li>
+                        <li><a href="#">Outdoor Plants</a></li>
+                        <li><a href="#">Cacti & Succulents</a></li>
+                        <li><a href="#">Plant Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@naturalplants.com</p>
+                    <p>📞 (555) 123-PLANT</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Natural Plants. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
